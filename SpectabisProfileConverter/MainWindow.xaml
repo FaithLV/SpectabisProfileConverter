@@ -1,0 +1,39 @@
+﻿<Window x:Class="SpectabisProfileConverter.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpectabisProfileConverter"
+        mc:Ignorable="d"
+        
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        Title="Profile Converter" Height="400" Width="720" WindowStyle="ToolWindow">
+
+    <Grid>
+        <materialDesign:ColorZone materialDesign:ShadowAssist.ShadowDepth="Depth2" Mode="PrimaryMid" Padding="20" Margin="0,16,0,0">
+            <TextBlock HorizontalAlignment="Center" FontSize="32" Text="Spectabis Profile Converter" />
+        </materialDesign:ColorZone>
+
+        <materialDesign:Card Padding="16" Margin="16,0,16,16" VerticalAlignment="Bottom" Height="244" x:Name="SelectSource" Visibility="Collapsed">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Vertical">
+                    <TextBlock FontSize="18" Text="Select Convertion Source:" Margin="0,10" />
+                    <StackPanel Orientation="Vertical">
+                        <RadioButton Content="PCSX2Bonus" FontSize="18" Click="PCSX2Bonus_Click"/>
+                        <RadioButton Content="Old Spectabis" FontSize="18" Click="OldSpectabis_Click" IsEnabled="False"/>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </materialDesign:Card>
+
+    </Grid>
+
+</Window>
